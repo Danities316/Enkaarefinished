@@ -7,7 +7,7 @@ const options = {
 
   headers: {
     "Access-Control-Allow-Credentials": true,
-    "Access-Control-Allow-Origin": "https://www.enkaare.com",
+    "Access-Control-Allow-Origin": "https://enkaare.co",
     "Access-Control-Allow-Headers":
       "Origin, X-Requested-With, Content-Type, Accept, authorization",
     "Access-Control-Allow-Methods": "POST",
@@ -25,11 +25,11 @@ let f = fetch("https://yielding-dented-amusement.glitch.me/get", options).catch(
   }
 );
 
-// loader[0].classList.add("addedloader");
+loader[0].classList.add("addedloader");
 
 f.then((res) => res.json())
   .then((d) => {
-    // loader[0].classList.remove("addedloader");
+     loader[0].classList.remove("addedloader");
     const {auth, dashboard} = d;
 
     if (auth === "yes") {
@@ -71,7 +71,7 @@ form.addEventListener("submit", (e) => {
 
     headers: {
       "Access-Control-Allow-Credentials": true,
-      "Access-Control-Allow-Origin": "https://www.enkaare.com",
+      "Access-Control-Allow-Origin": "https://enkaare.co",
       "Access-Control-Allow-Headers":
         "Origin, X-Requested-With, Content-Type, Accept, authorization",
       "Access-Control-Allow-Methods": "POST",
